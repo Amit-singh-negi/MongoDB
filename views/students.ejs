@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <table border="1">
+     <tr>
+    <td>name</td>
+    <td>age</td>
+    <td>email</td>
+    <td>Operation</td>
+  </tr>
+  <% students.forEach(students=>{%>
+       <tr>
+    <td><%= students.name%></td>
+    <td><%= students.age %></td>
+    <td><%= students.email%></td>
+     <td> <a href="/ui/delete/<%= students._id %>"> Delete</a>  </td>
+     <td> <a href="/ui/student/<%= students._id %>"> Update</a>  </td>
+  </tr>
+ <%})%>
+
+ </table>
+    
+</body>
+</html>
